@@ -1,4 +1,14 @@
 #!/bin/bash
+
+# initialisasi var
+export DEBIAN_FRONTEND=noninteractive
+OS=`uname -m`;
+MYIP=$(curl -4 icanhazip.com)
+if [ $MYIP = "" ]; then
+   MYIP=`ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1`;
+fi
+MYIP2="s/xxxxxxxxx/$MYIP/g";
+
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 
@@ -87,7 +97,7 @@ echo " เด้งไปเลยเฟสนี้แน่นอน : www.fac
 echo ""
 echo ""
 rm /usr/bin/pass
-rm allvertion.sh
+rm ocsall.sh
 exit
 fi
 
@@ -215,7 +225,7 @@ clear
 echo ""
 echo "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
 echo ""
-echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/ และกรอกข้อมูล 2 ด้านล่าง!"
+echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/install และกรอกข้อมูล 2 ด้านล่าง!"
 echo "Database:"
 echo "- Database Host: localhost"
 echo "- Database Name: $DatabaseName"
@@ -260,5 +270,5 @@ echo "" | tee -a log-install.txt
 #echo "" | tee -a log-install.txt
 echo "โปรดรีบูต VPS ของคุณ!" | tee -a log-install.txt
 echo "=======================================================" | tee -a log-install.txt
-rm -f /root/Rasta-OCS.sh
+rm -f /root/ocsall.sh
 cd ~/
