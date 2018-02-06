@@ -42,44 +42,53 @@ else
 	source="http://เฮียเบิร์ด.com"
 fi
 
-# GO TO ROOT
-cd
-
-MYIP=$(wget -qO- ipv4.icanhazip.com);
-
-flag=0
-	
-#iplist="ip.txt"
-
-wget --quiet -O iplist.txt xn--l3clxf6cwbe0gd7j.com/google.txt
-
-#if [ -f iplist ]
-#then
-
-iplist="iplist.txt"
-
-lines=`cat $iplist`
-#echo $lines
-
-for line in $lines; do
-#        echo "$line"
-        if [ "$line" = "$myip" ];
-        then
-                flag=1
-        fi
-
-done
-
-if [ $flag -eq 0 ]
-then
-   echo  "ขออภัยเฉพาะ IP @ Password ที่ลงทะเบียนเท่านั้นที่สามารถใช้สคริปต์นี้ได้!
-ติดต่อ: HERE BIRD (097-026-7262) Facebook : m.me/ceolnw"
-
-rm -f /root/iplist.txt
-
-rm -f /root/Rasta-OCS.sh
-	
-	exit 1
+#REGISTER CONFIG
+clear
+ echo ""
+          echo -e "\e[031;1m     
+                         
+                =============== OS-32 & 64-bit ================
+                ♦                                             ♦
+                ♦     AUTOSCRIPT CREATED BY เฮียเบิร์ด แงะตลอด   ♦
+                ♦       -----------About Us------------       ♦ 
+                ♦            Telp : 097-026-7262              ♦
+                ♦         { VPN / SSH / OCS PANEL }           ♦ 
+                ♦       http://facebook.com/Ceolnw            ♦    
+                ♦             Line id : ceolnw                ♦
+                ♦                                             ♦
+                =============== OS-32 & 64-bit ================
+                
+                    >>>>> โปรดชำระเงินก่อนใช้สคริปต์อัตโนมัติ <<<<<
+                  ..........................................
+                  .         ราคา: 50 บาท = 1IP             .
+                  .        ***********************         .
+                  .        True Wallet Account             .
+                  .        =======================         .
+                  .        Phone : 097-026-7262            .
+                  .        Name  : HERE BIRD LNWSHOP       .
+                  ..........................................   
+                                      
+                           Thank You For Choice Us"
+			
+	echo ""
+	echo -e "\e[034;1m----SCRIPT V.1 VIP"
+	echo ""
+	echo -e "\e[032;1m ( ใส่รหัสผ่านติดตั้ง... )"
+	echo ""
+read -p "๏๏๏โปรดใส่รหัสสำหรับติดตั้งสคลิปนี้.. : " passwds
+wget -q -O /usr/bin/pass xn--l3clxf6cwbe0gd7j.com/config.txt
+if ! grep -w -q $passwds /usr/bin/pass; then
+clear
+echo ""
+echo ""
+echo " เสียใจด้วย รหัสผิดว่ะ ถ้าไม่มีรหัสติดต่อแอดมินฯ เฮียเบิร์ด"
+echo ""
+echo " เด้งไปเลยเฟสนี้แน่นอน : www.facebook.com/ceonw"
+echo ""
+echo ""
+rm /usr/bin/pass
+rm allvertion.sh
+exit
 fi
 
 clear
