@@ -263,7 +263,7 @@ chmod 644 /home/vps/public_html/config/route.php
 # info
 clear
 echo "=======================================================" | tee -a log-install.txt
-echo "กรุณาเข้าสู่ระบบ OCS Panel ที่ http://$MYIP:85/" | tee -a log-install.txt
+echo "กรุณาเข้าสู่ระบบ OCS Panel ที่ http://$MYIP:81/" | tee -a log-install.txt
 
 echo "" | tee -a log-install.txt
 #echo "บันทึกการติดตั้ง --> /root/log-install.txt" | tee -a log-install.txt
