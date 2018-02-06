@@ -102,9 +102,9 @@ exit
 fi
 
 clear
-echo "--------------------------------- OCS PANELS INSTALLER FOR BEBIAN -------------------------------"
-
-echo "                    DEVELOPED BY OCSPANEL.INFO / ( 097-026-7262 )                    "
+echo "---------------- OCS PANELS INSTALLER FOR DEBIAN ----------------"
+echo ""
+echo "            DEVELOPED BY OCSPANEL.INFO / ( 097-026-7262 )        "
 echo ""
 echo ""
 echo "ยินดีต้อนรับสู่ Osc Panel Auto Script : กรุณายืนยันการตั้งค่าต่าง ๆ ดังนี้"
@@ -223,7 +223,7 @@ chmod 777 /home/vps/public_html/config/route.php
 
 clear
 echo ""
-echo "-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_"
+echo "======================================================="
 echo ""
 echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/install และกรอกข้อมูล 2 ด้านล่าง!"
 echo "Database:"
@@ -263,7 +263,7 @@ chmod 644 /home/vps/public_html/config/route.php
 # info
 clear
 echo "=======================================================" | tee -a log-install.txt
-echo "กรุณาเข้าสู่ระบบ OCS Panel ที่ http://$MYIP:81/" | tee -a log-install.txt
+echo "กรุณาเข้าสู่ระบบ OCS Panel ที่ http://$MYIP:85/" | tee -a log-install.txt
 
 echo "" | tee -a log-install.txt
 #echo "บันทึกการติดตั้ง --> /root/log-install.txt" | tee -a log-install.txt
