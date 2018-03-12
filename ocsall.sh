@@ -43,6 +43,12 @@ else
 	echo "คุณไม่ได้เรียกใช้สคริปต์นี้ในระบบปฏิบัติการ Debian"
 	exit
 fi
+sudo apt-get update
+apt-get remove apt-listchanges
+apt-get install curl
+sudo apt install curl
+sudo apt-get update
+sudo apt-get install curl
 
 clear
 echo "---------------- OCS PANELS INSTALLER FOR DEBIAN ----------------"
