@@ -270,10 +270,31 @@ apt-get -y --force-yes -f install libxml-parser-perl
 
 echo "unset HISTFILE" >> /etc/profile
 
-chmod 755 /home/vps/public_html/config
-chmod 644 /home/vps/public_html/config/inc.php
-chmod 644 /home/vps/public_html/config/route.php
+sleep 5
+echo "กรุณาตั้งค่า ระบบเติมเงิน หมายเลขอ้างอิงวอลเลต"
 
+sleep 5
+nano /home/vps/public_html/application/controllers/topup/wallet/config.php
+
+sleep 2
+cd /home/vps/public_html/
+rm -rf install
+
+sleep 3
+clear
+echo "
+----------------------------------------------
+[√] Source : Ocspanel.info 
+[√] ขั้นตอนต่อไปนี้ให้ท่านตอบ..Y
+[√] กำลังเริ่มติดตั้ง : Wallet..... [ OK !! ]
+----------------------------------------------
+ "
+sudo apt-get install curl
+sudo service apache2 restart
+sudo apt-get install php5-curl
+sudo service apache2 restart
+
+sleep 4
 # info
 clear
 echo "
