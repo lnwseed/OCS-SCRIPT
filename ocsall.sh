@@ -1,14 +1,4 @@
 #!/bin/bash
-
-# initialisasi var
-export DEBIAN_FRONTEND=noninteractive
-OS=`uname -m`;
-MYIP=$(curl -4 icanhazip.com)
-if [ $MYIP = "" ]; then
-   MYIP=`ifconfig | grep 'inet addr:' | grep -v inet6 | grep -vE '127\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d: -f2 | awk '{ print $1}' | head -1`;
-fi
-MYIP2="s/xxxxxxxxx/$MYIP/g";
-
 myip=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0' | head -n1`;
 myint=`ifconfig | grep -B1 "inet addr:$myip" | head -n1 | awk '{print $1}'`;
 
@@ -43,6 +33,55 @@ else
 	echo "คุณไม่ได้เรียกใช้สคริปต์นี้ในระบบปฏิบัติการ Debian"
 	exit
 fi
+
+vps="VPS";
+
+if [[ $vps = "VPS" ]]; then
+	source="http://ocspanel.info"
+else
+	source="http://เฮียเบิร์ด.com"
+fi
+
+# GO TO ROOT
+cd
+
+MYIP=$(wget -qO- ipv4.icanhazip.com);
+
+flag=0
+	
+#iplist="ip.txt"
+
+wget --quiet -O iplist.txt xn--l3clxf6cwbe0gd7j.com/google.txt
+
+#if [ -f iplist ]
+#then
+
+iplist="iplist.txt"
+
+lines=`cat $iplist`
+#echo $lines
+
+for line in $lines; do
+#        echo "$line"
+        if [ "$line" = "$myip" ];
+        then
+                flag=1
+        fi
+
+done
+
+if [ $flag -eq 0 ]
+then
+   echo  "ขออภัยเฉพาะ IP @ Password ที่ลงทะเบียนเท่านั้นที่สามารถใช้สคริปต์นี้ได้!
+ติดต่อ: HERE BIRD (097-026-7262) Facebook : m.me/ceolnw"
+
+rm -f /root/iplist.txt
+
+rm -f /root/Rasta-OCS.sh
+	
+	exit 1
+fi
+
 sudo apt-get update
 apt-get remove apt-listchanges
 apt-get install curl
