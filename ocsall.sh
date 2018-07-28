@@ -97,22 +97,28 @@ echo "
 ----------------------------------------------
  " | lolcat
  sleep 5
-echo "---------------- OCS PANELS INSTALLER FOR DEBIAN ----------------"
-echo ""
-echo "            DEVELOPED BY OCSPANEL.INFO / ( 097-026-7262 )        "
-echo ""
-echo ""
-echo "ยินดีต้อนรับสู่ Osc Panel Auto Script : กรุณายืนยันการตั้งค่าต่าง ๆ ดังนี้"
-echo "คุณสามารถใช้ข้อมูลของตัวเองได้เพียงแค่ กดลบ หรือ กด Enter ถ้าคุณเห็นด้วยกับข้อมูลของเรา"
+
+clear 
+echo "
+----------------------------------------------
+[√] OCS PANELS INSTALLER FOR DEBIAN 
+[√] DEVELOPED BY OCSPANEL.INFO
+[√] ( 097-026-7262 )
+----------------------------------------------
+[√] ( กรุณายืนยันการตั้งค่าต่าง ๆ ดังนี้ )
+[√] ( หากคุณไม่เห็นด้วยกับรหัสผ่านของเรา เพียงกด ลบ )
+[√] ( หากต้อฃการทดลองเพียงแค่กด Enter ไป )
+----------------------------------------------
+ " | lolcat
 echo ""
 echo "1.ตั้งรหัสผ่านใหม่สำหรับ user root MySQL:"
 read -p "Password baru: " -e -i abc12345 DatabasePass
-echo ""
+echo "----------------------------------------------"
 echo "2.ตั้งค่าชื่อฐานข้อมูลสำหรับ OCS Panels"
 echo "โปรดใช้ตัวอัพษรปกติเท่านั้นห้ามมีอักขระพิเศษอื่นๆที่ไม่ใช่ขีดล่าง (_)"
 read -p "Nama Database: " -e -i OCS_PANEL DatabaseName
-echo ""
-echo "เอาล่ะ [ พี่เทพ ] นี่คือทั้งหมดที่ระบบ Ocs Script ต้องการ เราพร้อมที่จะติดตั้งแผง OCS ของคุณแล้ว"
+echo "----------------------------------------------"
+echo "เอาล่ะ [ พี่เทพ ] เราพร้อมที่จะติดตั้งแผง OCS ของคุณแล้ว"
 read -n1 -r -p "กดปุ่ม Enter เพื่อดำเนินการต่อ ..."
 
 apt-get remove --purge mysql\*
@@ -219,26 +225,33 @@ chmod 777 /home/vps/public_html/config/route.php
 clear
 echo "
 ----------------------------------------------
-[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป Ocspanel.info 
+[√] Server : มาถึงขั้นตอนสุดท้ายแล้ว 
 [√] Connect...
 [√] Wellcome : กรุณาทำตามขั้นตอน... [ OK !! ]
 ----------------------------------------------
+[√] เปิดเบราว์เซอร์ http://$MYIP:81/install
+[√] และกรอกข้อมูลตามด้านล่าง !
+----------------------------------------------
  " | lolcat
- sleep 5
-echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/install และกรอกข้อมูล 2 ด้านล่าง!"
+echo ""
 echo "Database:"
 echo "- Database Host: localhost"
 echo "- Database Name: $DatabaseName"
 echo "- Database User: root"
 echo "- Database Pass: $DatabasePass"
-echo ""
+echo "----------------------------------------------"
 echo "Admin Login:"
 echo "- Username: ตามที่[พี่เทพ]ต้องการ"
 echo "- Password New: ตามที่[พี่เทพ]ต้องการ"
 echo "- Confirm Password New: ตามที่[พี่เทพ]ต้องการ"
-echo ""
-echo "นำข้อมูลไปติดตั้งที่ Browser และรอให้เสร็จสิ้นจากนั้นปิด Browser และกลับมาที่นี่ (Putty) แล้วกด [ENTER]!"
-
+echo "
+----------------------------------------------
+[√] นำข้อมูลไปติดตั้งที่ Browser ให้เสร็จสิ้น
+[√] จากนั้นปิด Browser และกลับมาที่นี่ (Putty)
+[√] แล้วกด [ENTER] !
+----------------------------------------------
+ " | lolcat
+ 
 sleep 3
 echo ""
 read -p "หากขั้นตอนข้างต้นเสร็จสิ้นโปรดกดปุ่ม [Enter] เพื่อดำเนินการต่อ ..."
@@ -262,13 +275,12 @@ chmod 644 /home/vps/public_html/config/route.php
 
 # info
 clear
-echo "=======================================================" | tee -a log-install.txt
-echo "กรุณาเข้าสู่ระบบ OCS Panel ที่ http://$MYIP:81/" | tee -a log-install.txt
-
-echo "" | tee -a log-install.txt
-#echo "บันทึกการติดตั้ง --> /root/log-install.txt" | tee -a log-install.txt
-#echo "" | tee -a log-install.txt
-echo "โปรดรีบูต VPS ของคุณ!" | tee -a log-install.txt
-echo "=======================================================" | tee -a log-install.txt
+echo "
+----------------------------------------------
+[√] กรุณาเข้าสู่ระบบ OCS Panel
+[√] ที่ http://$MYIP:81/
+[√] ขอบคุณที่ใช้บริการ Ocspanel.info <3
+----------------------------------------------
+ " | lolcat
 rm -f /root/ocsall.sh
 cd ~/
