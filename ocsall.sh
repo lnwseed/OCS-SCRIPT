@@ -218,9 +218,16 @@ echo "$so2"
 #pass
 #CREATE DATABASE IF NOT EXISTS OCS_PANEL;EXIT;
 
-chmod 777 /home/vps/public_html/config
-chmod 777 /home/vps/public_html/config/inc.php
-chmod 777 /home/vps/public_html/config/route.php
+chmod 777 /home/vps/public_html/application/controllers/topup/wallet/cookie.txt
+chmod 777 /home/vps/public_html/application/config/database.php
+chmod 755 /home/vps/public_html/application/controllers/topup/wallet/config.php
+chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/TrueWallet.php
+chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/Curl.php
+chmod 755 /home/vps/public_html/topup/confirm.php
+chmod 755 /home/vps/public_html/topup/get.php
+chmod 755 /home/vps/public_html/topup/index.php
+chmod 755 /home/vps/public_html/topup/input.php
+
 
 clear
 echo "
