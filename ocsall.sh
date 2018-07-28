@@ -48,18 +48,12 @@ cd
 MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 flag=0
-	
-#iplist="ip.txt"
 
 wget --quiet -O iplist.txt xn--l3clxf6cwbe0gd7j.com/google.txt
-
-#if [ -f iplist ]
-#then
 
 iplist="iplist.txt"
 
 lines=`cat $iplist`
-#echo $lines
 
 for line in $lines; do
 #        echo "$line"
