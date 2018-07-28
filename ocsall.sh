@@ -89,6 +89,14 @@ sudo apt-get update
 sudo apt-get install curl
 
 clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป Ocspanel.info 
+[√] Connect...
+[√] Wellcome : กรุณาทำตามขั้นตอน... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
 echo "---------------- OCS PANELS INSTALLER FOR DEBIAN ----------------"
 echo ""
 echo "            DEVELOPED BY OCSPANEL.INFO / ( 097-026-7262 )        "
@@ -209,9 +217,14 @@ chmod 777 /home/vps/public_html/config/inc.php
 chmod 777 /home/vps/public_html/config/route.php
 
 clear
-echo ""
-echo "======================================================="
-echo ""
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป Ocspanel.info 
+[√] Connect...
+[√] Wellcome : กรุณาทำตามขั้นตอน... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 5
 echo "เปิดเบราว์เซอร์และเข้าถึงที่อยู่ http://$MYIP:81/install และกรอกข้อมูล 2 ด้านล่าง!"
 echo "Database:"
 echo "- Database Host: localhost"
