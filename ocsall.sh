@@ -315,6 +315,6 @@ echo "
 [√] ดูวิธีการตั้งค่าฐานข้อมูล / Wallet
 [√] ที่ Ocspanel.info/howto
 ----------------------------------------------
- "
+ " | lolcat
 rm -f /root/ocsall.sh
 cd ~/
