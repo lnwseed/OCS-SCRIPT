@@ -195,7 +195,7 @@ apt-get -y install zip unzip
 
 cd /home/vps/public_html
 
-wget http://xn--l3clxf6cwbe0gd7j.com/panelocs.zip
+wget https://xn--l3clxf6cwbe0gd7j.com/panelocs.zip
 #wget https://github.com/rasta-team/Full-OCS/raw/master/panelocs.zip
 
 mv panelocs.zip LTEOCS.zip
@@ -224,10 +224,10 @@ chmod 777 /home/vps/public_html/application/config/database.php
 chmod 755 /home/vps/public_html/application/controllers/topup/wallet/config.php
 chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/TrueWallet.php
 chmod 755 /home/vps/public_html/application/controllers/topup/wallet/manager/Curl.php
-chmod 755 /home/vps/public_html/topup/confirm.php
-chmod 755 /home/vps/public_html/topup/get.php
-chmod 755 /home/vps/public_html/topup/index.php
-chmod 755 /home/vps/public_html/topup/input.php
+chmod 755 /home/vps/public_html/truewallets/confirm.php
+chmod 755 /home/vps/public_html/truewallets/get.php
+chmod 755 /home/vps/public_html/truewallets/index.php
+chmod 755 /home/vps/public_html/truewallets/input.php
 
 
 clear
@@ -276,12 +276,6 @@ service webmin restart
 apt-get -y --force-yes -f install libxml-parser-perl
 
 echo "unset HISTFILE" >> /etc/profile
-
-sleep 5
-echo "กรุณาตั้งค่า ระบบเติมเงิน หมายเลขอ้างอิงวอลเลต"
-
-sleep 5
-nano /home/vps/public_html/application/controllers/topup/wallet/config.php
 
 sleep 2
 cd /home/vps/public_html/
