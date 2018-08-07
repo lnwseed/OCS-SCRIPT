@@ -80,7 +80,16 @@ rm -f /root/Rasta-OCS.sh
 	
 	exit 1
 fi
-
+clear
+echo "
+----------------------------------------------
+[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป Ocspanel.info 
+[1] Do you want to continue? [Y/n] = Y
+[2] Do you want to continue? [Y/n] = Y
+[√] ในขั้นตอนนี้ตอบ : Y... [ OK !! ]
+----------------------------------------------
+ " | lolcat
+ sleep 3
 sudo apt-get update
 apt-get remove apt-listchanges
 apt-get install curl
