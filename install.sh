@@ -1,9 +1,7 @@
 cd /home/vps/public_html
 
 
-wget http://xn--l3clxf6cwbe0gd7j.com/install.zip
-
-#wget https://github.com/lnwseed/OCS-SCRIPT/raw/master/install.zip
+wget https://github.com/lnwseed/OCS-SCRIPT/raw/master/install.zip
 
 mv install.zip LTEOCS.zip
 
