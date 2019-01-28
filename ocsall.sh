@@ -42,9 +42,9 @@ fi
 vps="VPS";
 
 if [[ $vps = "VPS" ]]; then
-	source="http://ocspanel.info"
+	source="http://truepay.me"
 else
-	source="http://เฮียเบิร์ด.com"
+	source="http://vpnfree.truepay.me/admin007"
 fi
 
 # GO TO ROOT
@@ -84,7 +84,7 @@ fi
 clear
 echo "
 ----------------------------------------------
-[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป Ocspanel.info 
+[√] ยินดีต้อนรับเข้าสู่ : ระบบสคริป 097-026-7262 
 [1] Do you want to continue? [Y/n] = Y
 [2] Do you want to continue? [Y/n] = Y
 [√] ในขั้นตอนนี้ตอบ : Y... [ OK !! ]
@@ -295,7 +295,7 @@ sleep 3
 clear
 echo "
 ----------------------------------------------
-[√] Source : Ocspanel.info 
+[√] Source : m.me/ceolnw 
 [√] ขั้นตอนต่อไปนี้ให้ท่านตอบ..Y
 [√] กำลังเริ่มติดตั้ง : Wallet..... [ OK !! ]
 ----------------------------------------------
