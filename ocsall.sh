@@ -54,7 +54,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 flag=0
 
-wget --quiet -O iplist.txt xn--l3clxf6cwbe0gd7j.com/google.txt
+wget --quiet -O iplist.txt vpnfree.truepay.me/admin007/google.txt
 
 iplist="iplist.txt"
 
@@ -205,8 +205,8 @@ apt-get -y install zip unzip
 
 cd /home/vps/public_html
 
-wget http://xn--l3clxf6cwbe0gd7j.com/panelocs.zip
-#wget https://github.com/rasta-team/Full-OCS/raw/master/panelocs.zip
+#wget http://xn--l3clxf6cwbe0gd7j.com/panelocs.zip
+wget https://github.com/rasta-team/Full-OCS/raw/master/panelocs.zip
 
 mv panelocs.zip LTEOCS.zip
 
