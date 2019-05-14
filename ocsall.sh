@@ -44,7 +44,7 @@ vps="VPS";
 if [[ $vps = "VPS" ]]; then
 	source="http://truepay.me"
 else
-	source="http://vpnfree.truepay.me/admin007"
+	source="lifestyle-vpn.tk/admin007"
 fi
 
 # GO TO ROOT
@@ -54,7 +54,7 @@ MYIP=$(wget -qO- ipv4.icanhazip.com);
 
 flag=0
 
-wget --quiet -O iplist.txt vpnfree.truepay.me/admin007/google.txt
+wget --quiet -O iplist.txt lifestyle-vpn.tk/admin007/google.txt
 
 iplist="iplist.txt"
 
